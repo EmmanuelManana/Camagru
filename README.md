@@ -1,2 +1,2 @@
-# Camagru
-instagram like website in php (OOP).
+# camagru
+Instragram, snapchar like website.
