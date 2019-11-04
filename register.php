@@ -1,10 +1,6 @@
-<?php
-
-
-?>
 
 <?php
-    //include_once 'includes/header.php';
+   //include_once 'includes/header.php';
 ?>
 
 <h2>Register</h2>
@@ -16,15 +12,18 @@
         <label>First name</label>
         <input type="text" name="forename" value="<?php if(!empty($_POST)){echo $_POST['forename'];}  ?>">
         <label for="">Email</label>
-        <input type="email" name="email" required value="<?php if (!empty($_POST)){echo $_POST['email'];}?>"/>
-        <input>
+        <input type="email" name="email" required value="<?php if(!empty($_POST)){echo $_POST['email'];}?>"/>
+        <label>Password</label>
+        <input type="password" name="passwd" required>
+        <label>Password Confirmmation</label>
+        <input type="password" name="passwd_confirm" required>
 
     </div>
     <button  type="submit" class="submit">Submit</button>
 </form>
 
 
-<?php  require_once 'includes/footer.php'; 
+<?php // require_once 'includes/footer.php'; 
 
     if(!empty($_POST))
     {

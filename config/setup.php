@@ -8,11 +8,10 @@ include 'database.php';
 
 try 
 {
-    //must add the. try cartch method
     //connect to SQL 
     $conn = new Database($DB_USER, $DB_PASSWORD);
 
-    //password
+    /* execute a query*/
     $conn->query("
     CREATE DATABASE IF NOT EXISTS `$DB_NAME`;
     

@@ -1,0 +1,44 @@
+
+header {
+	/*background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 221, 0.8)), to(rgb(255, 255, 255, 0)));;*/
+	list-style-type: none;
+    justify-content: space-between;
+    color: white;
+    padding: 1vw;
+    background-image: linear-gradient( to bottom,violet, orange, white);
+}
+
+footer{
+	
+	vertical-align: bottom;
+	height: 25px;
+	padding-top: 70px;
+	margin : 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    color: white;
+    background-image: linear-gradient( to bottom, white, orange);
+}
+
+
+#mini-form {
+	padding: 20px;
+}
+
+#logo-img {
+    height: 100px;
+    width: auto;
+}
+
+#logo-img {
+	width : 8vw;
+}
+
+.navbar
+{
+    position:relative;
+    width: 100%;
+    background: black;
+}

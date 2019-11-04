@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>camagru</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
     </head>
         <body>
 
@@ -14,7 +15,7 @@
                         <div class="navbar">
                         
 
-                            <li><a href="register.php  ">Register</a></li>
+                            <li><a href="register.php">Register</a></li>
 
                         </div>
                     </div>
