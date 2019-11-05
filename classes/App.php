@@ -17,7 +17,7 @@ class App
     }
 
     /*done*/
-    static function getAuth();
+    static function getAuth()
     {
         return new Auth(Session::getInstance(), ['restriction_msg' => "you do not have access to this page"]);
     }

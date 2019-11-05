@@ -28,8 +28,7 @@
 
         public function isUniq($field, $db, $table, $errorMsg = '')
         {
-            $record = $db->query("SELECT id FROM $table WHERE $field = ?",[$this->getField($field-
-            )])->fetch();
+            $record = $db->query("SELECT id FROM $table WHERE $field = ?", [$this->getField($field)])->fetch();
             if ($record)
             {
                 $this->erros[$field] = $errorMsg;

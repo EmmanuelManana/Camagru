@@ -21,7 +21,7 @@ class Auth
     /* Insert new user data into the data base*/
     public function register($db, $name, $forename, $login, $email, $passwd)
     {
-        $password = this->hashPassword($passwd);// encryped passwd before adding  to the database 
+        $password = $this->hashPassword($passwd);// encryped passwd before adding  to the database 
         $token = Str::random(52);
 
         $db->query("INSERT INTO user SET `name` = ?, forename = ?, `login` = ?, email = ?, passwd = ?, `check` = ?, mail_com = ?, `token`=? ",[
@@ -42,7 +42,7 @@ class Auth
     {
         if ($login != null)
         {
-            $db->query('UPDATE user SET `login` = ? WHERE id = ?', [$login, $user_login])
+            $db->query('UPDATE user SET `login` = ? WHERE id = ?', [$login, $user_login]);
         }
         if ($email != null)
         {
@@ -55,7 +55,7 @@ class Auth
         }
         if ($mail_com == null)
         {
-            $db->query('UPDATE user SET `mail_com` = ? WHERE id = ?',[0, $user_id)] );
+            $db->query('UPDATE user SET `mail_com` = ? WHERE id = ?',[0, $user_id]);
         }
         else if ($mail_com == 1)
         {
@@ -142,7 +142,7 @@ class Auth
 
     public function login($db, $login, $passwd, $remember = false)
     {
-        $user = $db->('SELECT * FROM user WHERE (`login` = :login OR `email` = :login) AND `check` = 1', ['login' => $login])->fetch();
+        $user = $db->query('SELECT * FROM user WHERE (`login` = :login OR `email` = :login) AND `check` = 1', ['login' => $login])->fetch();
         if ($user && password_verify($passwd, $user->passwd))/* selecting the hashed password from the database*/
         {
             $this->connect($user);
