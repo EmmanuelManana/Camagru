@@ -13,7 +13,7 @@ class Session
         }
         return self::$instance;
     }
-
+    /* start a new session through the constructor*/ 
     public function __construct()
     {
         /*im assigned a session id stored in a session cookie, called PHPSESSID*/

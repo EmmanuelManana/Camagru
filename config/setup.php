@@ -9,9 +9,9 @@ include 'database.php';
 try 
 {
     //connect to SQL 
-    $conn = new Database($DB_USER, $DB_PASSWORD);
+    $conn = new Database($DB_USER, $DB_PASSWORD);/* creates a new PDO object*/
 
-    /* execute a query*/
+    /* execute a query, create database and tables at once*/
     $conn->query("
     CREATE DATABASE IF NOT EXISTS `$DB_NAME`;
     
