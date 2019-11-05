@@ -21,7 +21,7 @@ class Auth
     /* Insert new user data into the data base*/
     public function register($db, $name, $forename, $login, $email, $passwd)
     {
-        $password = this->hashPassword($passwd);/* encryped passwd before adding  to the database*/ 
+        $password = this->hashPassword($passwd);// encryped passwd before adding  to the database 
         $token = Str::random(52);
 
         $db->query("INSERT INTO user SET `name` = ?, forename = ?, `login` = ?, email = ?, passwd = ?, `check` = ?, mail_com = ?, `token`=? ",[
@@ -222,4 +222,5 @@ class Auth
             }
             reset($files);
     }
+
 }
