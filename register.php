@@ -7,7 +7,7 @@
 
         $db = App::getDatabase();
         $validator = new Validator($_POST);
-        print_r($_POST);
+    
     }
 ?>
 
