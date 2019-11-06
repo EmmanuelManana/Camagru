@@ -1,6 +1,6 @@
 <?php
 
-require_once '../config/database.php';
+//require_once '../config/database.php';
 
 class App
 {
@@ -11,7 +11,7 @@ class App
         if (!self::$db)
         {
             /* pass as params -> dbusername,dbpasssword, dbname*/
-            self::$db = new Database($DB_USER, $DB_PASSWORD,$DB_NAME); 
+            self::$db = new Database('root', 'root','camagru'); 
         }
         return self::$db;
     }

@@ -1,3 +1,15 @@
+<?php
+    require_once 'includes/autoload.php';
+
+    if (!empty($_POST))
+    {
+        $errors = array();
+
+        $db = App::getDatabase();
+        $validator = new Validator($_POST);
+        print_r($_POST);
+    }
+?>
 
 <?php
    //include_once 'includes/header.php';
@@ -14,7 +26,7 @@
         <label for="">Email</label>
         <input type="email" name="email" required value="<?php if(!empty($_POST)){echo $_POST['email'];}?>"/>
         <label>Password</label>
-        <input type="password" name="passwd" required>
+        <input type="password" name="passwd" required><!-- will show red boxes iif theres no input-->
         <label>Password Confirmmation</label>
         <input type="password" name="passwd_confirm" required>
 

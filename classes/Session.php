@@ -9,7 +9,7 @@ class Session
         /*research more on self*/
         if (!self::$instance)
         {
-            self::$instance = new Session();
+            self::$instance = new Session();// call the construct to start a new session
         }
         return self::$instance;
     }
@@ -20,7 +20,7 @@ class Session
         session_start();
     }
 
-    public function setFlash($key, $message)
+    public function setFlash($key, $message)// set session variables
     {
         $_SESSION['flash'][$key] = $message;
     }
