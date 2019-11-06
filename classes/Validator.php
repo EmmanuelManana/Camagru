@@ -9,6 +9,7 @@
         {
             $this->data = $data;
         }
+        
         public function getField($field)
         {
             if (!isset($this->data[$data]))
