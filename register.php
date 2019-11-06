@@ -11,9 +11,9 @@
         $validator->isAlpha('name', "Invalid username");
         $validator->isTooLong('name', "name too long, exceeds 250 charecters");
         $validator->isAlpha('forename', "Invalid login");
-        $validator->isTooLong('forename', "forename too long, exceedds 250 characters");
+        $validator->isTooLong('forename', "forename too long, exceeds 250 characters");
         $validator->isAlpha('login', "Invalid login");
-        $validator->isTooLong('login', "login too long, exceedds 250 characters");
+        $validator->isTooLong('login', "login too long, exceeds 250 characters");
 
         if($validator->isValid())
         {
