@@ -9,10 +9,10 @@
         {
             $this->data = $data;
         }
-        
+
         public function getField($field)
         {
-            if (!isset($this->data[$data]))
+            if (!isset($this->data[$field]))
             {
                 return null;
             }
@@ -68,7 +68,7 @@
         {
             if (strlen($this->getField($field)) > 250)
             {
-                $this->errors[$field] = $errorMsg;
+                $this->errors[$field] = $errorMsg;/* store message in tihe error array*/
             }
         }
     
