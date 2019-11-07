@@ -14,10 +14,22 @@
         $validator->isTooLong('forename', "forename too long, exceeds 250 characters");
         $validator->isAlpha('login', "Invalid login");
         $validator->isTooLong('login', "login too long, exceeds 250 characters");
+        $validator->isUniq('login', $db, 'user', "The login is already used");
+		$validator->isEmail('email', "invalid email.");
+		$validator->isTooLong('email', "email is too long");
+		$validator->isUniq('email', $db, 'user', "email has been registered already");		
+		$validator->isConfirmed('passwd', " The password is invalid, 8 min characters)");
+		$validator->isTooLong('passwd', "the password is too long");
+	//	$validator->isCaptcha('g-recaptcha-response', "the captcha did not work");
 
         if($validator->isValid())
         {
-
+            /*start a new session if user is valid*/
+            App::getAuth()->register($db, $_POST['name'], $_POST['forename'], $_POST['login'], $_POST['email'], $_POST['passwd']);
+            $session = new Session();
+            Session::getInstance()->setFlash('success', "a Confirmation email has been sent to validate your account");
+            App::redirect('login.php');
+			die('Your account has been created. Please validate by clicking on the sent on your email.');
         }
         else
         {
@@ -28,10 +40,21 @@
 ?>
 
 <?php
-   //include_once 'includes/header.php';
+   include_once 'includes/header.php';
 ?>
 
 <h2>Register</h2>
+
+<?php if (!empty($errors)): ?>
+    <div class="alert alert-danger">
+        <p>the form was completed correcty: </p>
+            <ul>
+                <?php  foreach($errors as $error): ?>
+                     <li><?= $error; ?><br/><br/></li>
+                    <?php endforeach; ?>
+            </ul>
+    </div>
+<?php endif; ?>
 
 <form method="POST" id="login-form">
     <div class="form-group" id="mini-form">
@@ -63,7 +86,8 @@
 
     if(!empty($_POST))
     {
-         print_r($_POST);
+         //print_r($_POST);
+         var_dump($_POST);
     }
 
 ?>

@@ -11,7 +11,7 @@ class Session
         {
             self::$instance = new Session();// call the construct to start a new session
         }
-        return self::$instance;
+        return self::$instance;//return a pointer to self, that way i have access to any method in this class.
     }
     /* start a new session through the constructor*/ 
     public function __construct()

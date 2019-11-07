@@ -52,7 +52,8 @@
             }
         }
 
-        public function isCaptcha($field, $errorMsg = ''){
+        public function isCaptcha($field, $errorMsg = '')
+        {
             $secret = "6Lf0YnQUAAAAADz5C6K_wybuV8vILba4IVS-oOh_";
             $response = $this->getField($field);
             $remoteip = $_SERVER['REMOTE_ADDR'];
