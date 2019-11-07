@@ -18,7 +18,7 @@
 		$validator->isEmail('email', "invalid email.");
 		$validator->isTooLong('email', "email is too long");
 		$validator->isUniq('email', $db, 'user', "email has been registered already");		
-		$validator->isConfirmed('passwd', " The password is invalid, 8 min characters)");
+		$validator->isConfirmed('passwd', " Password must contain 8 min characters, aleast 1 Uppercase, 1 special character)");
 		$validator->isTooLong('passwd', "the password is too long");
 	//	$validator->isCaptcha('g-recaptcha-response', "the captcha did not work");
 
@@ -47,7 +47,7 @@
 
 <?php if (!empty($errors)): ?>
     <div class="alert alert-danger">
-        <p>the form was completed correcty: </p>
+        <p>the form was completed incorrectly: </p>
             <ul>
                 <?php  foreach($errors as $error): ?>
                      <li><?= $error; ?><br/><br/></li>
@@ -76,6 +76,9 @@
 
         <label>Password Confirmmation</label>
         <input type="password" name="passwd_confirm" required>
+
+        <br/>
+	<!--	<div class="g-recaptcha" data-sitekey="6Ld1gMEUAAAAADd8GjOC4eFoseSUz1zDeCgEHtmW"></div>-->
 
     </div>
     <button  type="submit" class="submit">Submit</button>

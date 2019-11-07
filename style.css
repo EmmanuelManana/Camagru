@@ -1,6 +1,6 @@
 
 header {
-	/*background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 221, 0.8)), to(rgb(255, 255, 255, 0)));;*/
+	//background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 221, 0.8)), to(rgb(255, 255, 255, 0)));
 	list-style-type: none;
     justify-content: space-between;
     color: white;

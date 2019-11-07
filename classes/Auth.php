@@ -30,12 +30,13 @@ class Auth
 
         $to      = $email;
         $subject = 'Confirmation of your Camagru Account';
-        /* build confirm.php*/
+
         $message = "Hello! \n\n To validate your account, please click on the following link \n\n http://localhost:80/Camagru/confirm.php?id=$user_id&token=$token";
-		$headers = 'From: webmaster@camagru.com' . "\r\n" .
-		'Reply-To: webmaster@camagru.com' . "\r\n" .
+		$headers = 'From: emanana@student.wethinkcode.co.za' . "\r\n" .
+		'Reply-To: emanana@student.wethinkcode.co.za' . "\r\n" .
 		'X-Mailer: PHP/' . phpversion();
-		mail($to, $subject, $message, $headers);
+        mail($to, $subject, $message, $headers);
+        
     }
 
     public function modify($db, $login = '', $email = '',$passwd ='', $mail_com ='', $user_id) 

@@ -54,7 +54,7 @@
 
         public function isCaptcha($field, $errorMsg = '')
         {
-            $secret = "6Lf0YnQUAAAAADz5C6K_wybuV8vILba4IVS-oOh_";
+            $secret = "6Ld1gMEUAAAAANGNIf86GFRzkGR220Vpe3ibeN_L";
             $response = $this->getField($field);
             $remoteip = $_SERVER['REMOTE_ADDR'];
             $api_url = "https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$response."&remoteip=".$remoteip ;
