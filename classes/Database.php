@@ -5,7 +5,7 @@
 		
 		private $pdo;
 
-		public function __construct($login, $password, $database_name = NULL, $host = "127.0.0.1:3306")
+		public function __construct($login, $password, $database_name = NULL, $host = "127.0.0.1")
 		{
 			if (isset($database_name) && !empty($database_name))
 			{
