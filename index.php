@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'inc/autoload.php';
+    require_once 'includes/autoload.php';
     $auth = App::getAuth();
     $db = App::getDatabase();
     $auth->connectFromCookie($db);

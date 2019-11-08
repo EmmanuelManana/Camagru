@@ -28,7 +28,7 @@
             App::getAuth()->register($db, $_POST['name'], $_POST['forename'], $_POST['login'], $_POST['email'], $_POST['passwd']);
             $session = new Session();
             Session::getInstance()->setFlash('success', "a Confirmation email has been sent to validate your account");
-            App::redirect('login.php');
+            // App::redirect('login.php');
 			die('Your account has been created. Please validate by clicking on the sent on your email.');
         }
         else
@@ -83,16 +83,5 @@
     </div>
     <button  type="submit" class="submit">Submit</button>
 </form>
-
-
-<?php // require_once 'includes/footer.php'; 
-
-    if(!empty($_POST))
-    {
-         //print_r($_POST);
-         var_dump($_POST);
-    }
-
-?>
 
 
