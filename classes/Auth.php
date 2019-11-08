@@ -43,7 +43,7 @@ class Auth
     {
         if ($login != null)
         {
-            $db->query('UPDATE user SET `login` = ? WHERE id = ?', [$login, $user_login]);
+            $db->query('UPDATE user SET `login` = ? WHERE id = ?', [$login, $user_id]);
         }
         if ($email != null)
         {
