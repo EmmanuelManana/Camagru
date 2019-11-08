@@ -31,7 +31,7 @@ class Auth
         $to      = $email;
         $subject = 'Confirmation of your Camagru Account';
 
-        $message = "Hello! \n\n To validate your account, please click on the following link \n\n http://localhost:80/Camagru/confirm.php?id=$user_id&token=$token";
+        $message = "Hello! \n\n To validate your account, please click on the following link \n\n http://localhost:8080/camagru/confirm.php?id=$user_id&token=$token";
 		$headers = 'From: emanana@student.wethinkcode.co.za' . "\r\n" .
 		'Reply-To: emanana@student.wethinkcode.co.za' . "\r\n" .
 		'X-Mailer: PHP/' . phpversion();
@@ -66,11 +66,11 @@ class Auth
         $this->session->write('auth',$user);
     }
 
-    public function confirm()
+    public function confirm($db, $user_id, $token)
     {
         $user = $db->query('SELECT * FROM user WHERE id = ?', [$user_id])->fetch();
 
-        if ($user && $user->token)
+        if ($user && $user->token == $token)
         {
             /* if user exist check is set to 1 and token is reset(set to null)*/
             $db->query('UPDATE user SET `token` = null, `check` = 1 WHERE id = ?', [$user_id]);
