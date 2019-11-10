@@ -11,7 +11,7 @@ class App
         if (!self::$db)
         {
             /* pass as params -> dbusername,dbpasssword, dbname*/
-            self::$db = new Database('root', '123pass','camagru');
+            self::$db = new Database('root', '','camagru');
         }
         return self::$db;
     }

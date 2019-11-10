@@ -32,7 +32,6 @@
 
 <?php  require 'includes/header.php'; ?>
 
-<h2></h2>
 <h2>Login</h2>
 <form action="" method="POST" id="login-form">
 

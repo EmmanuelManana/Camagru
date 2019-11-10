@@ -2,28 +2,28 @@
 
     class Validator
     {
-        private $data;
-        private $errors = [];
+        private $data;//to store the global $_POST array
+        private $errors = [];//An array to store errors
 
-        public function __construct($data)
+        public function __construct($data)//default constructor
         {
-            $this->data = $data;
+            $this->data = $data;//pass $_POST into, $data  
         }
 
-        public function getField($field)
+        public function getField($field)//reffer to an index into data array
         {
             if (!isset($this->data[$field]))
             {
                 return null;
             }
-            return $this->data[$field];
+            return $this->data[$field];//return the index into the data array
         } 
 
         public function isAlpha($field, $errorMsg = '')
         {
             if (!preg_match('/^[a-zA-Z0-9_-]+$/', $this->getField($field)))
             {
-                $this->errors[$field] = $errorMsg;
+                $this->errors[$field] = $errorMsg;//assign an error message in an index of the data array
             }
         }
 
@@ -37,7 +37,7 @@
         }
 
         public function isEmail($field, $errorMsg = '')
-        {   /*research more on filter_var() */
+        {   
             if (!filter_var($this->getField($field), FILTER_VALIDATE_EMAIL))
             {
                 $this->errors[$field] = $errorMsg;
@@ -75,12 +75,12 @@
     
         public function isValid()
         {
-            return empty($this->errors);
+            return empty($this->errors);//if the erroe array is empty return true else return false
         }
     
         public function getErrors()
         {
-            return $this->errors;
+            return $this->errors;//return all the errors as stored in the data array
         }
     }
 ?>

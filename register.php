@@ -4,7 +4,6 @@
     if (!empty($_POST))
     {
         $errors = array();
-
         $db = App::getDatabase();
         $validator = new Validator($_POST);
 
@@ -15,6 +14,7 @@
         $validator->isAlpha('login', "Invalid login");
         $validator->isTooLong('login', "login too long, exceeds 250 characters");
         $validator->isUniq('login', $db, 'user', "The login is already used");
+        $validator->isUniq('name', $db, 'user', "name already in use");
 		$validator->isEmail('email', "invalid email.");
 		$validator->isTooLong('email', "email is too long");
 		$validator->isUniq('email', $db, 'user', "email has been registered already");		

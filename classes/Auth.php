@@ -34,7 +34,7 @@ class Auth
         $message = "Hello! \n\n To validate your account, please click on the following link \n\n http://localhost:8080/camagru/confirm.php?id=$user_id&token=$token";
 		$headers = 'From: emanana@student.wethinkcode.co.za' . "\r\n" .
 		'Reply-To: emanana@student.wethinkcode.co.za' . "\r\n" .
-		'X-Mailer: PHP/' . phpversion();
+		'G-Mail: PHP/' . phpversion();
         mail($to, $subject, $message, $headers);
         
     }
