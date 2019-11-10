@@ -1,8 +1,8 @@
 <?php
-   require_once 'includes/autoload.php';
+require_once 'includes/autoload.php';
 
     /* if there are no session variables from the login page, then redirect user to login page*/
-    App::getAuth()->restrict();/* get Auth return the AUTH class, hence we access to all methods in  the Class Auth*/
+//App::getAuth()->restrict();/* get Auth return the AUTH class, hence we access to all methods in  the Class Auth*/
 
     if (!empty($_POST))
     {
@@ -31,7 +31,7 @@
         {
             App::getAuth()->modify($db, $_POST['login'], $_POST['email'], $_POST['passwd'], $_POST['mail_com'], $_SESSION['auth']->id);
             Session::getInstance()->setFlash('success', "The changes have been made");
-           App::redirect('account.php');
+            App::redirect('account.php');
         }
         else
         {
@@ -39,11 +39,20 @@
         }
     }
    require 'includes/header.php';
-
 ?>
 
-<h2> Welcome <?= $_SESSION['auth']?></h2>
+<h2> Welcome <?= $_SESSION['auth']->login; ?></h2>
 
+<?php  if(!empty($errors)): ?>
+    <div class="alert alert-danger">
+        <p>The form was not completed correctly: </p>
+            <ul>
+                <?php foreach($errors as $error): ?>
+                    <li>$error<br/><br/></li>
+                <?php endforeach; ?>
+            </ul>
+    </div>
+<?php  endif; ?>
 
 
 <form action="" method="POST" id="login-form">

@@ -34,7 +34,6 @@
         else
         {
             $errors = $validator->getErrors();
-            //print_r($errors);
         }
     }
 ?>
@@ -50,8 +49,8 @@
         <p>the form was completed incorrectly: </p>
             <ul>
                 <?php  foreach($errors as $error): ?>
-                     <li><?= $error; ?><br/><br/></li>
-                    <?php endforeach; ?>
+                    <li><?= $error; ?><br/><br/></li><!-- print erros array-->
+                <?php endforeach; ?>
             </ul>
     </div>
 <?php endif; ?>
@@ -84,4 +83,5 @@
     <button  type="submit" class="submit">Submit</button>
 </form>
 
+<?php require 'includes/footer.php'; ?>
 
