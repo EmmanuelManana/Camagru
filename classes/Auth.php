@@ -186,9 +186,9 @@ class Auth
             $subject = 'Reset your Camaguru password';
             $message = "Hello! \n \n To reset your password, please click on the following link \n \n
             http://127.0.0.1:80/Camagru/reset.php?id={$user->id}&token=$reset_token";
-            $headers = 'From: webmaster@camagru.com' . "\r\n" .
-            'Reply-To: webmaster@camagru.com' . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
+            $headers = 'From: emanana@student.wethink.co.za' . "\r\n" .
+            'Reply-To: emanana@student.wethinkcode.co.za' . "\r\n" .
+            'G-Mail: PHP/' . phpversion();
             mail($to, $subject, $message, $headers);
             return $user;
         }
