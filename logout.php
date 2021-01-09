@@ -1,5 +1,5 @@
-<?php
-    require 'includes/autoload';
-    App::getAuth()->logout();
-    Session::getInstance()->setFlash('success',"You've been logged out");
-    App::redirect('login.php');
+<?php 
+require 'includes/autoload.php';
+App::getAuth()->logout();
+Session::getInstance()->setFlash('success', "logged out");
+App::redirect('login.php');

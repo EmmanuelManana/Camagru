@@ -1,51 +1,6 @@
-/*
-header {
-	/*background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 221, 0.8)), to(rgb(255, 255, 255, 0)));
-	list-style-type: none;
-    justify-content: space-between;
-    color: white;
-    padding: 1vw;
-    background-image: linear-gradient( to bottom,violet, orange, white);
-}
-
-footer{
-	
-	vertical-align: bottom;
-	height: 25px;
-	padding-top: 70px;
-	margin : 0;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-    color: white;
-    background-image: linear-gradient( to bottom, white, orange);
-}
-
-
-#mini-form {
-	padding: 20px;
-}
-
-#logo-img {
-    height: 100px;
-    width: auto;
-}
-
-#logo-img {
-	width : 8vw;
-}
-
-.navbar
-{
-    position:relative;
-    width: 100%;
-    background: black;
-}*/
-
 @font-face {
     font-family: "ana";
-    src: url("./inc/typo/conta.ttf");
+    src: url("./includes/typo/conta.ttf");
 }
 
 html {
@@ -53,7 +8,7 @@ html {
 	padding: 0px;
 	width: 100%; 
 	height: 100%;
-	background-color: aquamarine;
+	background-color: rgb(125, 176, 191);
 	background-repeat: no-repeat;
 	text-align: center;
 }
@@ -78,7 +33,7 @@ h2 {
 }
 
 footer{
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 0, 221, 0.6)));;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 23, 59, 0.551)), to(rgba(255, 255, 255, 0)));;
 	vertical-align: bottom;
 	height: 25px;
 	padding-top: 70px;
@@ -91,7 +46,7 @@ footer{
 }
 
 header {
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 221, 0.8)), to(rgb(255, 255, 255, 0)));;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 23, 59, 0.551)), to(rgba(255, 255, 255, 0)));;
 	list-style-type: none;
     justify-content: space-between;
     color: white;
@@ -129,11 +84,11 @@ input[type=radio] {
 	height : 12vmin;
 	border-radius: 30px;
 	background-color: rgba(255, 255, 255, 0.60);
-	width: 640px;
+	width: 320px;
 }
 
 .frame{
-	width: 9vmin;
+	width: 6vmin;
 }
 
 .frame-overview{
@@ -175,7 +130,7 @@ input[type=radio] {
 }
 
 .count:before {
-	counter-increment: section;
+	counter-includesrement: section;
 	content: counter(section);
   }
 
@@ -272,7 +227,6 @@ li > a:hover {
 	text-shadow: 0px 0px 20px purple;	
 }
 
-
 .navbar {
     overflow: hidden;
 	position: relative;
@@ -309,7 +263,7 @@ label {
 #login-form .submit {
     display: block;
     width: 100%;
-	background-color: rgba(255, 0, 221, 0.6);
+	background-color: rgba(36, 142, 19, 0.598);
 	color: white;
     border: none;
     border-bottom-left-radius: 5px;
@@ -321,7 +275,7 @@ label {
 }
 
 #login-form .submit:hover {
-	background-color: rgba(255, 0, 221, 0.8);
+	background-color: rgba(6, 41, 8, 0.8);
 }
 
 #previous_err a, #previous_succ a {
@@ -464,7 +418,7 @@ title {
 	}
 	
 	header {
-		background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 221, 0.8)), to(rgb(255, 255, 255, 0)));;
+		background: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 102, 160, 0.8)), to(rgb(255, 255, 255, 0)));;
 		list-style-type: none;
 		justify-content: space-between;
 		color: white;

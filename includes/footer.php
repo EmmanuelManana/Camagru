@@ -1,4 +1,6 @@
-        </div>
-    </body>
-<footer>@copyright 2019 emanana</footer>
+</div>
+</body>
+</div>
+
+<footer>©emanana 2019</footer>
 </html>
