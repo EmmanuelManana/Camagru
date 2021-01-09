@@ -6,7 +6,7 @@ class App{
 
 	static function getDatabase(){
 		if(!self::$db){
-			self::$db = new Database('root', '123pass', 'camagru');
+			self::$db = new Database('root', '', 'camagru');
 		}
 		return self::$db;
 	}

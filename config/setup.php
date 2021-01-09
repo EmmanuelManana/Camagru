@@ -1,5 +1,5 @@
 <?php
-require_once 'class/Database.php';
+require_once '../class/Database.php';
 require_once 'database.php';
 
 $pdo = new Database($DB_USER, $DB_PASSWORD);
