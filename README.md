@@ -71,7 +71,7 @@ Install <a href="">Bitnami MAMP</a>
    git clone https://github.com/martian1431/camagru.git
    ```
 
-### Configure server environment
+### Configure server environment (XAMPP)
 
 1. Enable sendmail function in php.ini file:
 <p align="center">
