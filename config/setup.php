@@ -63,19 +63,17 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `comm`
-  MODIFY `comm_id` int(4) NOT NULL AUTO_includesREMENT;
+  MODIFY `comm_id` int(4) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `img`
-  MODIFY `up_id` int(11) UNSIGNED NOT NULL AUTO_includesREMENT;
+  MODIFY `up_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `likes`
-  MODIFY `like_id` int(11) NOT NULL AUTO_includesREMENT;
+  MODIFY `like_id` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_includesREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 ")
-
-
 
 ?>
