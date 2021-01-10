@@ -152,7 +152,7 @@ class Auth{
 	
 			$to      = $email;
 			$subject = 'camagru password reset';
-			$message = "  To reset your account password click on the link below \n\n   http://localhost:8080/camagru/reset.php?id={$user->id}&token=$reset_token";
+			$message = "  To reset your account password click on the link below \n\n   http://localhost/camagru/reset.php?id={$user->id}&token=$reset_token";
 			$headers = 'From: emanana@student.wethinkcode.co.za' . "\r\n" .
 			'Reply-To: emanana@student.wethinkcode.co.za' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
