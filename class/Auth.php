@@ -36,7 +36,7 @@ class Auth{
 
 		$to      = $email;
 		$subject = 'Confirmation link';
-		$message = "click on the link below to confirm your activate your account \n\n  http://localhost:8080/camagru/confirm.php?id=$user_id&token=$token";
+		$message = "click on the link below to confirm your activate your account \n\n  http://localhost/camagru/confirm.php?id=$user_id&token=$token";
 		$headers = 'From: emanana@student.wethinkcode.co.za' . "\r\n" .
 		'Reply-To: emanana@student.wethinkcode.co.za' . "\r\n" .
 		'G_MAIL: PHP/' . phpversion();
