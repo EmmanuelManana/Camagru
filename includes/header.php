@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8" />
 		<link rel="icon" href="includes/img/logo.png" type="image/png"/>
-        <title>@emanana</title>
+        <title>Camagru</title>
 		<link href="style.css" type="text/css" rel="stylesheet" />
     </head>
     <body>

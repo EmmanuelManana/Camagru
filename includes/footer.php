@@ -2,5 +2,5 @@
 </body>
 </div>
 
-<footer>©emanana 2019</footer>
+<footer>©Camagru 2019</footer>
 </html>
