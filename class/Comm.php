@@ -18,19 +18,21 @@ class Comm{
 	}
 
 	public function sendMailcomm($db, $up_id, $com, $name){
-		$user = $db->query("SELECT `up_usid` FROM `img` WHERE `up_id` = ?", [$up_id])->fetch();
-		$email = $db->query("SELECT `email` FROM `user` WHERE `id` = ?", [(int)$user->up_usid])->fetch();
-		$pref =  $db->query("SELECT `mail_com` FROM `user` WHERE `id` = ?", [(int)$user->up_usid])->fetch();
+//		$user = $db->query("SELECT `up_usid` FROM `img` WHERE `up_id` = ?", [$up_id])->fetch();
+//		$email = $db->query("SELECT `email` FROM `user` WHERE `id` = ?", [(int)$user->up_usid])->fetch();
+//		$pref =  $db->query("SELECT `mail_com` FROM `user` WHERE `id` = ?", [(int)$user->up_usid])->fetch();
 
-		if ((int)$pref->mail_com == 1){
-			$to = $email->email;
-			$subject = $name.'  commented on you photo';
-			$message = " Hello !\n\n$name commented on one of your Camaguru photos! \n\n\"$com\"";
-			$headers = 'wethinkcode.co.za' . "\r\n" .
-			'Reply-To: emanana@student.co.za' . "\r\n" .
-			'G-Mail  : PHP/' . phpversion();
-			mail($to, $subject, $message, $headers);
-		}
+		$imageAuthor = $db->query("SELECT img.up_id, user.email, user.mail_com FROM img INNER JOIN user ON img.up_usid = user.id")->fetch();
+
+        if ((int)$imageAuthor->mail_com == 1){
+            $to = $imageAuthor->email;
+            $subject = 'Comment';
+            $message = " Hello !\n\n$name commented on one of your Camagru photos! \n\n\"$com\"";
+            $headers = 'From: emanana@student.wethinkcode.co.za' . "\r\n" .
+                'Reply-To: emanana@student.wethinkcode.co.za' . "\r\n" .
+                'G_MAIL: PHP/' . phpversion();
+            mail($to, $subject, $message, $headers);
+        }
 	}
 }
 
