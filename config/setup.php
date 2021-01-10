@@ -76,4 +76,10 @@ ALTER TABLE `user`
 COMMIT;
 ")
 
+
+
+?>
+
+<?php 
+  echo "Database created successfully";
 ?>

@@ -40,6 +40,8 @@ class Auth{
 		$headers = 'From: emanana@student.wethinkcode.co.za' . "\r\n" .
 		'Reply-To: emanana@student.wethinkcode.co.za' . "\r\n" .
 		'G_MAIL: PHP/' . phpversion();
+		var_dump(mail($to, $subject, $message, $headers));
+		die();
 		mail($to, $subject, $message, $headers);
 	}
 
