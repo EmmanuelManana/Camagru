@@ -116,8 +116,8 @@ Install <a href="">Bitnami MAMP</a>
 <p align="center">
     <img src="docs/images/mysql-server.png" alt="start Mysql server">
 </p>
-3. Open browser and Go to url <a href="http://localhost/config/setup">http://localhost/config/setup</a> (Windows) or 
-<a href="http://localhost/config/setup">http://localhost:8080/config/setup</a> (Linux and MacOS) this will create a database and tables.
+3. Open browser and Go to url <a href="http://localhost/Camagru/config/setup">http://localhost/config/setup</a> (Windows) or 
+<a href="http://localhost/config/setup">http://localhost:8080/Camagru/config/setup</a> (Linux and MacOS) this will create a database and tables.
 
 
 ### Code Breakdown:
