@@ -68,7 +68,7 @@ Install <a href="">Bitnami MAMP</a>
    ```
 2. Clone the repo
    ```sh
-   git clone https://github.com/martian1431/camagru.git
+   git clone https://github.com/EmmanuelManana/Camagru.git
    ```
 
 ### Configure server environment (XAMPP)
@@ -149,9 +149,10 @@ Install <a href="">Bitnami MAMP</a>
       <ul>
         <li>Preliminary Checks, used PHP, used PDOs, config files at correct location</li>
         <li>Webserver starts</li>
+        <li>Setup database</li>
         <li>
             The application should allow a user to sign up by asking at least a valid email address,
-            an username and a password.
+            username, firstname, lastname and a password.
         </li>
         <li>
             At the end of the registration process, an user should confirm his account via a unique 
@@ -188,8 +189,6 @@ Install <a href="">Bitnami MAMP</a>
   </ol>
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Ruah MVC YouTube Course](https://www.youtube.com/watch?v=rkaLJrYnpOM&list=PLFPkAJFH7I0keB1qpWk5qVVUYdNLTEUs3&index=1&ab_channel=CurtisParham)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
